@@ -21,6 +21,7 @@
 @synthesize difficulty;
 
 int randomNumberWithLevel;
+int score;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,6 +42,9 @@ int randomNumberWithLevel;
     // Set title
     self.title = difficulty;
     
+    // Set score to 1
+    score = 1;
+    
     [self randomNumberGenerator:difficulty];
 
 }
@@ -48,6 +52,10 @@ int randomNumberWithLevel;
 - (IBAction)predictionResult:(id)sender {
     
     int prediction = [txtNumberPrediction.text intValue];
+    
+    if (prediction != randomNumberWithLevel) {
+        score++;
+    }
     
     if (prediction == randomNumberWithLevel) {
 
@@ -62,6 +70,13 @@ int randomNumberWithLevel;
         [self.view makeToast:toastDesc
                     duration:4.0
                     position:[NSValue valueWithCGPoint:CGPointMake(160, 300)]];
+        
+        // Set high score if it is best
+        NSNumber *highScore = [[NSUserDefaults standardUserDefaults] objectForKey:@"HighScore"];
+        if (score < [highScore intValue]) {
+            [[NSUserDefaults standardUserDefaults] setInteger:score forKey:@"HighScore"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }
         
         // Redirecting Home Page with 4 second delay
         double delayInSeconds = 5.0;

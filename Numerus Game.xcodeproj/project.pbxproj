@@ -25,6 +25,7 @@
 		EB3C6D6318CA8CA900FF5364 /* PlayGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3C6D6218CA8CA900FF5364 /* PlayGameViewController.m */; };
 		EB3C6D6718CD245700FF5364 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3C6D6618CD245700FF5364 /* UIView+Toast.m */; };
 		EB3C6D6918CD251D00FF5364 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3C6D6818CD251D00FF5364 /* QuartzCore.framework */; };
+		EB3C6D6D18CE57F300FF5364 /* HighScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3C6D6C18CE57F300FF5364 /* HighScoreViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		EB3C6D6518CD245700FF5364 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		EB3C6D6618CD245700FF5364 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		EB3C6D6818CD251D00FF5364 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EB3C6D6B18CE57F300FF5364 /* HighScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighScoreViewController.h; sourceTree = "<group>"; };
+		EB3C6D6C18CE57F300FF5364 /* HighScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighScoreViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,7 @@
 				EB3C6D5C18CA750500FF5364 /* HomeView */,
 				EB3C6D5818CA74C000FF5364 /* LevelView */,
 				EB3C6D6418CA8CAD00FF5364 /* PlayView */,
+				EB3C6D6E18CE57F700FF5364 /* HighScore */,
 			);
 			path = "Numerus Game";
 			sourceTree = "<group>";
@@ -201,6 +205,15 @@
 				EB3C6D6618CD245700FF5364 /* UIView+Toast.m */,
 			);
 			name = Toast;
+			sourceTree = "<group>";
+		};
+		EB3C6D6E18CE57F700FF5364 /* HighScore */ = {
+			isa = PBXGroup;
+			children = (
+				EB3C6D6B18CE57F300FF5364 /* HighScoreViewController.h */,
+				EB3C6D6C18CE57F300FF5364 /* HighScoreViewController.m */,
+			);
+			name = HighScore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB3C6D6318CA8CA900FF5364 /* PlayGameViewController.m in Sources */,
+				EB3C6D6D18CE57F300FF5364 /* HighScoreViewController.m in Sources */,
 				EB3C6D3718CA105400FF5364 /* ViewController.m in Sources */,
 				EB3C6D3118CA105400FF5364 /* AppDelegate.m in Sources */,
 				EB3C6D2D18CA105400FF5364 /* main.m in Sources */,

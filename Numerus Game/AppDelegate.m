@@ -28,6 +28,20 @@
     // Changing the Style of Status Bar Default
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     
+    // initialize defaults
+    NSString *score = @"HighScore";
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSNumber *highScore = (NSNumber *)[prefs objectForKey:score];
+    
+    if (highScore == nil) {
+        // sync the defaults to disk
+        [[NSUserDefaults standardUserDefaults] setInteger:1043 forKey:score];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setInteger:1043 forKey:score];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
     return YES;
 }
 							

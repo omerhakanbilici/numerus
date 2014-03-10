@@ -77,10 +77,10 @@
             </objects>
             <point key="canvasLocation" x="621" y="68"/>
         </scene>
-        <!--View Controller - High Score-->
+        <!--High Score View Controller - High Score-->
         <scene sceneID="Kgn-Qm-fBs">
             <objects>
-                <viewController id="hDN-Vh-tVh" sceneMemberID="viewController">
+                <viewController id="hDN-Vh-tVh" customClass="HighScoreViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NXn-sS-ghF"/>
                         <viewControllerLayoutGuide type="bottom" id="jFk-gu-QG6"/>
@@ -88,9 +88,22 @@
                     <view key="view" contentMode="scaleToFill" id="1K4-Lk-pkc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1500" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3O-oV-Hxs">
+                                <rect key="frame" x="0.0" y="89" width="320" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="40"/>
+                                <color key="textColor" red="0.229208315" green="0.57826450890000003" blue="0.20503493619999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="High Score" id="adn-YN-cqj"/>
+                    <connections>
+                        <outlet property="lblHighScore" destination="T3O-oV-Hxs" id="E14-Ef-L1A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n1M-Q1-3KY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
