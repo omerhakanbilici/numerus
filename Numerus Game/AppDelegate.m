@@ -39,9 +39,6 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     
-    [[NSUserDefaults standardUserDefaults] setInteger:1043 forKey:score];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
     return YES;
 }
 							

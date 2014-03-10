@@ -7,6 +7,7 @@
 //
 
 #import "HighScoreViewController.h"
+#import "UIView+Toast.h"
 
 @interface HighScoreViewController ()
 
@@ -45,4 +46,23 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnResetScore:(id)sender {
+    [[NSUserDefaults standardUserDefaults] setInteger:1043 forKey:@"HighScore"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    // Toast with duration, title, and position
+    NSString *toastDesc = @"Successfully removed score history.";
+    [self.view makeToast:toastDesc
+                duration:2.0
+                position:[NSValue valueWithCGPoint:CGPointMake(160, 300)]];
+    
+    // Redirecting Home Page with 2 second delay
+    double delayInSeconds = 2.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        
+        //Redirect to root view
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    });
+}
 @end

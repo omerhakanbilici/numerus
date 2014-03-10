@@ -11,5 +11,6 @@
 @interface HighScoreViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *lblHighScore;
+- (IBAction)btnResetScore:(id)sender;
 
 @end
