@@ -1,21 +1,294 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="7FS-S7-0Ks">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller - <      NUMERUS      />-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2lF-RU-sFA"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Vb-Ac-ovN"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gg9-f3-vH8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.059646738679999999" green="0.1469626913" blue="0.051317895080000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="40"/>
+                                <state key="normal" title="1 Player">
+                                    <color key="titleColor" red="0.229208315" green="0.57826450890000003" blue="0.20503493619999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vA9-WM-FTT" kind="push" identifier="OneToLevelSegue" id="638-hI-GUo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ix-Mm-JZE">
+                                <rect key="frame" x="0.0" y="200" width="320" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.088078968929919857" green="0.23064811862244894" blue="0.080608668101284253" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="40"/>
+                                <state key="normal" title="2 Player">
+                                    <color key="titleColor" red="0.229208315" green="0.57826450890000003" blue="0.20503493619999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ZWH-aQ-Kal" kind="push" identifier="TwoToLevelSegue" id="pkA-4i-bs3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.49999999999999961" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMp-ma-WbH">
+                                <rect key="frame" x="0.0" y="399" width="159" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.10247811944125519" green="0.74467873086734693" blue="0.063480077569213769" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <state key="normal" title="High Score">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.229208315" green="0.57826450890000003" blue="0.20503493619999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hDN-Vh-tVh" kind="push" id="6mA-8r-Cu8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfQ-qu-czU">
+                                <rect key="frame" x="161" y="399" width="159" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1024781194" green="0.74467873090000003" blue="0.063480077570000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                <state key="normal" title="About">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.229208315" green="0.57826450890000003" blue="0.20503493619999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cS5-vD-vFp" kind="push" id="2fz-Sj-xsQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.21643458262992168" green="0.5460379464285714" blue="0.193608381265018" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="&lt;      NUMERUS      />" id="dOU-wF-3c5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="621" y="68"/>
+        </scene>
+        <!--View Controller - High Score-->
+        <scene sceneID="Kgn-Qm-fBs">
+            <objects>
+                <viewController id="hDN-Vh-tVh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NXn-sS-ghF"/>
+                        <viewControllerLayoutGuide type="bottom" id="jFk-gu-QG6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1K4-Lk-pkc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="High Score" id="adn-YN-cqj"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n1M-Q1-3KY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1163" y="1080"/>
+        </scene>
+        <!--Table View Controller - 2 Player-->
+        <scene sceneID="Ygf-cT-APs">
+            <objects>
+                <tableViewController id="ZWH-aQ-Kal" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="TzC-3T-z0A">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="dQh-yr-1wG">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dQh-yr-1wG" id="XRD-sD-X4F">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="oTc-xT-Ciq" kind="push" identifier="TwoLevelToPlaySegue" id="g4w-EA-Jm0"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ZWH-aQ-Kal" id="q4J-U7-AgX"/>
+                            <outlet property="delegate" destination="ZWH-aQ-Kal" id="ayy-1O-h4r"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="2 Player" id="o4f-pL-4WH"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GD8-8G-a6c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1163" y="399"/>
+        </scene>
+        <!--Level View Controller - 1 Player-->
+        <scene sceneID="cfE-XW-R6F">
+            <objects>
+                <tableViewController id="vA9-WM-FTT" customClass="LevelViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="KYD-au-Jgh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexTrackingBackgroundColor" red="0.14509804549999999" green="0.35294118520000001" blue="0.1294117719" alpha="1" colorSpace="deviceRGB"/>
+                        <label key="tableFooterView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="acJ-wP-9Cw">
+                            <rect key="frame" x="0.0" y="146" width="320" height="270"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.23007754750000001" green="0.56688456629999995" blue="0.1979503943" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LevelCell" textLabel="gso-lS-vGB" rowHeight="60" style="IBUITableViewCellStyleDefault" id="k1Z-Kf-417">
+                                <rect key="frame" x="0.0" y="86" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k1Z-Kf-417" id="VAZ-TK-rGh">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="59"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gso-lS-vGB">
+                                            <rect key="frame" x="15" y="0.0" width="270" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="30"/>
+                                            <color key="textColor" red="0.229208315" green="0.57826450890000003" blue="0.20503493619999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.088078968930000001" green="0.23064811860000001" blue="0.080608668100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="oTc-xT-Ciq" kind="push" identifier="OneLevelToPlaySegue" id="Br9-us-aYt"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vA9-WM-FTT" id="JNh-sC-Cdo"/>
+                            <outlet property="delegate" destination="vA9-WM-FTT" id="68F-oF-oWa"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="1 Player" id="ei8-pl-XmH"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MBu-IN-fJ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1163" y="-298"/>
+        </scene>
+        <!--Play Game View Controller - Difficulty-->
+        <scene sceneID="8Rf-ts-L0g">
+            <objects>
+                <viewController id="oTc-xT-Ciq" customClass="PlayGameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Faf-lQ-xSM"/>
+                        <viewControllerLayoutGuide type="bottom" id="eIp-0R-8Po"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HS6-cB-tyf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Idi-dC-P3p">
+                                <rect key="frame" x="0.0" y="160" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="40"/>
+                                <state key="normal" title="click me">
+                                    <color key="titleColor" red="0.229208315" green="0.57826450890000003" blue="0.20503493619999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.96862751250000001" green="0.96862751250000001" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="predictionResult:" destination="oTc-xT-Ciq" eventType="touchUpInside" id="yJv-y5-Ovr"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter Number" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="u0h-0k-hP7">
+                                <rect key="frame" x="0.0" y="100" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96862751250000001" green="0.96862751250000001" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="200" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Congratulations!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgd-Ma-RfD">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="33"/>
+                                <color key="textColor" red="1" green="0.93554482995661459" blue="0.00090433453030602795" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23007754750000001" green="0.56688456629999995" blue="0.1979503943" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Difficulty" id="iXT-2q-cOa"/>
+                    <connections>
+                        <outlet property="btnSubmitPrediction" destination="Idi-dC-P3p" id="Vvp-BR-EnN"/>
+                        <outlet property="lblCongratulations" destination="qgd-Ma-RfD" id="Ocb-P5-Knf"/>
+                        <outlet property="txtNumberPrediction" destination="u0h-0k-hP7" id="A0z-JZ-j4s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vu7-i9-6WY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1732" y="74"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pHW-BA-dwp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7FS-S7-0Ks" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nPr-Cl-Kcx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="mQV-Gd-arZ">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="u5b-8v-ztp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P9D-6k-Fii" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="68"/>
+        </scene>
+        <!--View Controller - About-->
+        <scene sceneID="Su8-Vl-d2f">
+            <objects>
+                <viewController id="cS5-vD-vFp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i23-F3-xao"/>
+                        <viewControllerLayoutGuide type="bottom" id="7vg-zQ-piv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aGa-2b-DCs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Numerus         is a          high detailed  number prediction game ever." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="XuD-g6-Rgt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="268"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="30"/>
+                                <color key="textColor" red="0.229208315" green="0.57826450890000003" blue="0.20503493619999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ömer Hakan Bilici" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOQ-cN-qzu">
+                                <rect key="frame" x="91" y="276" width="138" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About" id="VkD-NO-Veq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hvw-9I-5Cc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1163" y="1800"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -23,4 +296,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Br9-us-aYt"/>
+    </inferredMetricsTieBreakers>
 </document>

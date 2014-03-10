@@ -13,6 +13,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    // Changing the Font of Navigation Bar Title
+    NSShadow *shadow = [[NSShadow alloc] init];
+    shadow.shadowColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.8];
+    shadow.shadowOffset = CGSizeMake(0, 1.0);
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                           [UIColor blackColor], NSForegroundColorAttributeName,
+                                                           shadow, NSShadowAttributeName,
+                                                           [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:33.0], NSFontAttributeName, nil]];
+    // Color of Back button white
+    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
+    
+    // Changing the Style of Status Bar Default
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+    
     return YES;
 }
 							
