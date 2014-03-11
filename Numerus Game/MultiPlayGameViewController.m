@@ -1,22 +1,23 @@
 //
-//  PlayGameViewController.m
+//  MultiPlayGameViewController.m
 //  Numerus Game
 //
-//  Created by Ömer Hakan Bilici on 8.03.2014.
+//  Created by Ömer Hakan Bilici on 11.03.2014.
 //  Copyright (c) 2014 8CookIn. All rights reserved.
 //
 
-#import "PlayGameViewController.h"
+#import "MultiPlayGameViewController.h"
 #import "UIView+Toast.h"
 
-@interface PlayGameViewController ()
+@interface MultiPlayGameViewController ()
 
 @end
 
-@implementation PlayGameViewController
+@implementation MultiPlayGameViewController
 
 @synthesize lblCongratulations;
 @synthesize txtNumberPrediction;
+@synthesize lblPlayerTurn;
 @synthesize difficulty;
 
 int randomNumberWithLevel;
@@ -45,19 +46,21 @@ int score;
     score = 1;
     
     [self randomNumberGenerator:difficulty];
-
+    
 }
 
 - (IBAction)predictionResult:(id)sender {
     
     int prediction = [txtNumberPrediction.text intValue];
     
+    lblPlayerTurn.text = [NSString stringWithFormat:@"%d. Player Turn", (score%2)+1];
+    
     if (prediction != randomNumberWithLevel) {
         score++;
     }
     
     if (prediction == randomNumberWithLevel) {
-
+        
         // Show Congratulations label from view
         [lblCongratulations setHidden:FALSE];
         
@@ -86,8 +89,8 @@ int score;
             [self.navigationController popToRootViewControllerAnimated:YES];
         });
         
-//        UIViewController *prevVC = [self.navigationController.viewControllers objectAtIndex:0];
-//        [self.navigationController popToViewController:prevVC animated:YES];
+        //        UIViewController *prevVC = [self.navigationController.viewControllers objectAtIndex:0];
+        //        [self.navigationController popToViewController:prevVC animated:YES];
     }
     if (prediction < randomNumberWithLevel) {
         
@@ -124,7 +127,7 @@ int score;
     else {
         randomNumberWithLevel = 0;
     }
-//    randomNumberWithLevel = arc4random();
+    //    randomNumberWithLevel = arc4random();
     return randomNumberWithLevel;
 }
 
