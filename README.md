@@ -3,5 +3,9 @@ Numerus
 
 Simple number guessing game for iOS
 
-For now it supported 1 Player and Offline High Score.
+Supported Options:
+  - Single Player
+  - Multi Player
+  - Levels (Easy, Medium, Hard, Impossible)
+  - High Score
 
