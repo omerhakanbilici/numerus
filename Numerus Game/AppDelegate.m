@@ -41,7 +41,7 @@
     }
     
     //BugSense
-    [BugSenseController sharedControllerWithBugSenseAPIKey:@"2a57c707"];
+    [BugSenseController sharedControllerWithBugSenseAPIKey:@"API_KEY"];
     return YES;
 }
 							
