@@ -8,11 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+#import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
+
 @interface PlayGameViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *lblCongratulations;
 @property (weak, nonatomic) IBOutlet UITextField *txtNumberPrediction;
 @property (weak, nonatomic) IBOutlet UIButton *btnSubmitPrediction;
+
+@property (nonatomic, strong) AVAudioPlayer *audioWalk;
 
 @property (nonatomic, strong) NSString *difficulty;
 

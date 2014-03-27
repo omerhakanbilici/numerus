@@ -8,12 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+#import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
+
 @interface MultiPlayGameViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *lblCongratulations;
 @property (weak, nonatomic) IBOutlet UITextField *txtNumberPrediction;
 @property (weak, nonatomic) IBOutlet UIButton *btnSubmitPrediction;
 @property (weak, nonatomic) IBOutlet UILabel *lblPlayerTurn;
+
+@property (nonatomic, strong) AVAudioPlayer *audioWalk;
 
 @property (nonatomic, strong) NSString *difficulty;
 

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <BugSense-iOS/BugSenseController.h>
 
 @implementation AppDelegate
 
@@ -39,6 +40,8 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     
+    //BugSense
+    [BugSenseController sharedControllerWithBugSenseAPIKey:@"2a57c707"];
     return YES;
 }
 							

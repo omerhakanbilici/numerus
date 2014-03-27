@@ -9,6 +9,9 @@
 #import "PlayGameViewController.h"
 #import "UIView+Toast.h"
 
+#import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
+
 @interface PlayGameViewController ()
 
 @end
@@ -18,6 +21,7 @@
 @synthesize lblCongratulations;
 @synthesize txtNumberPrediction;
 @synthesize difficulty;
+@synthesize audioWalk;
 
 int randomNumberWithLevel;
 int score;
@@ -45,6 +49,35 @@ int score;
     score = 1;
     
     [self randomNumberGenerator:difficulty];
+    
+    // Play audio even if lock screen is on, the with options allows audio from other applications to play without interruption
+    [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayback withOptions:AVAudioSessionCategoryOptionMixWithOthers error: nil];
+    [[AVAudioSession sharedInstance] setActive: YES error:nil];
+    
+    // Walk Audio File
+    NSString *soundFile2 = [[NSBundle mainBundle] pathForResource:@"numerus" ofType:@"mp3"];
+    audioWalk = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:soundFile2] error:nil];
+    
+    // Load the audio into memory
+    [audioWalk prepareToPlay];
+    
+    // Permit the timer to run in the background
+    UIBackgroundTaskIdentifier bgTask = 0;
+    UIApplication  *app = [UIApplication sharedApplication];
+    bgTask = [app beginBackgroundTaskWithExpirationHandler:^{
+        [app endBackgroundTask:bgTask];
+    }];
+    
+    // Prevent the application from going to sleep while it is running
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
+    
+    // Starts receiving remote control events and is the first responder
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    [self becomeFirstResponder];
+    
+    // Plays audio infinite
+    audioWalk.numberOfLoops = -1;
+    [audioWalk play];
 
 }
 
